@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="Tracker_UWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Tracker_UWP"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Map" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Maps:MapControl Name="myMap"
+                         MapServiceToken="916mkHZvr6B4YgTFgl1k~FIL5FjkOcHHk-uLCWbnpxQ~AvoUPuhv79No8yNbxJqWrwRkNH0RcoRilCf4iK7xZUKAMau4vPwWUXiZOh41MCjZ"
+                         MapTapped="myMap_MapTapped"
+                         MapElementClick="myMap_MapElementClick"
+                         />
+    </Grid>
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True" Background="#1565C0">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Icon="Upload" Label="Load Route" Foreground="White" Click="LoadRoute_Click"/>
+                <AppBarButton Icon="Save" Label="Save Route" Foreground="White" Click="SaveRoute_Click"/>
+                <AppBarButton Icon="Add" Label=" New Route" Foreground="White" Click="NewRoute_Click"/>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+    
+</Page>
