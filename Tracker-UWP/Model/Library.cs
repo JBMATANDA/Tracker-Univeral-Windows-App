@@ -12,6 +12,6 @@ namespace Tracker_UWP.Model
     {
         public BackgroundTaskRegistration registration;
 
-        public bool started
+        public bool started;
     }
 }
